@@ -4,6 +4,7 @@
 
 <div id="ideas">
   <% @ideas.each do |idea| %>
+    <%= image_tag idea.picture_url, width: '100%' if idea.picture.present? %>
     <%= render idea %>
     <p>
       <%= link_to "Show this idea", idea %>
